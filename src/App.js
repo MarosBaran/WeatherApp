@@ -1,24 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Weather from "./components/Weather";
+import Navbar from "./UI/Navbar";
+import Footer from "./UI/Footer";
+import { QueryClientProvider } from "@tanstack/react-query";
+import { queryClient } from "./util/http.js";
+
+import ForecastList from "./components/ForecastList";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <QueryClientProvider client={queryClient}>
+      <Navbar />
+      <Weather />
+      <ForecastList />
+      <Footer />
+    </QueryClientProvider>
   );
 }
 

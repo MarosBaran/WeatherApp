@@ -1,0 +1,38 @@
+.info {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 20px 20px 0px 0px;
+  background-color: #3399ff;
+  padding-bottom: 0.2rem;
+}
+
+.info p {
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  font-size: small;
+}
+
+.temp {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 0px 0px 20px 20px;
+  background-color: white;
+}
+
+.tempContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: -1rem;
+}
+
+.weatherIcon {
+  width: 15%;
+  margin-right: 0.5rem;
+}
+
+.temp p {
+  text-align: center;
+  font-weight: bolder;
+  color: #3399ff;
+  width: 3em;
+}

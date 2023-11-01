@@ -1,0 +1,36 @@
+.container {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 14px;
+  background-color: rgba(255, 255, 255, 0.235);
+  margin-left: 10%;
+  width: 81%;
+  height: 200px;
+}
+.desc {
+  padding-left: 2%;
+  color: #3399ff;
+  width: 35%;
+  height: 170px;
+  float: left;
+}
+.desc p {
+  font-weight: bold;
+}
+.content {
+  font-weight: bold;
+  color: white;
+  width: 63%;
+  height: 200px;
+  background-color: #3399ff;
+  text-align: center;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 14px;
+  float: left;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+}
