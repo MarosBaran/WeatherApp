@@ -20,6 +20,7 @@ const ForecastList = () => {
     queryKey: ["forecast", weatherInfo, city],
     queryFn: ({ signal }) => fetchForecast({ signal, weatherInfo, city }),
     enabled: !!city || !!weatherInfo,
+    refetchInterval: 300000,
   });
 
   const openModalHandler = (item) => {

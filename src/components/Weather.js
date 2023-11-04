@@ -32,6 +32,7 @@ const Weather = (props) => {
     queryKey: ["weather", weatherInfo, city],
     queryFn: ({ signal }) => fetchWeather({ signal, weatherInfo, city }),
     enabled: !!city || !!weatherInfo,
+    refetchInterval: 300000,
   });
 
   let content = (

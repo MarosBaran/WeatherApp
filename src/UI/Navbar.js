@@ -23,6 +23,7 @@ const Navbar = (props) => {
 
   const cityHandler = (event) => {
     event.preventDefault();
+
     if (!enteredNameIsValid) {
       return;
     }
@@ -38,7 +39,7 @@ const Navbar = (props) => {
       <div className={classes.input}>
         <input
           type="text"
-          placeholder={"Type in city"}
+          placeholder={"Type in City"}
           value={enteredName}
           onChange={nameChangeHandler}
         ></input>
