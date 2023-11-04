@@ -28,7 +28,20 @@ const WeatherInfo = (props) => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.2, delay: 0.3 }}
       >
-        <div className={classes.desc}>
+        <div className={classes.container}>
+          <div className={classes.desc}>
+            <p>Pressure: </p>
+            <p>Humidity: </p>
+
+            <p>Wind Speed: </p>
+          </div>
+          <div className={classes.values}>
+            <p>{props.weatherPressure + " hPa"}</p>
+            <p>{props.weatherHumidity + " %"}</p>
+            <p>{windSpeedKmh + " Km/h"} </p>
+          </div>
+        </div>
+        {/* <div className={classes.desc}>
           <br></br>
           <p>
             <b>Pressure:</b>
@@ -50,7 +63,7 @@ const WeatherInfo = (props) => {
           <p>
             <b>{props.weatherHumidity} %</b>
           </p>
-        </div>
+        </div> */}
       </motion.div>
     </>
   );
