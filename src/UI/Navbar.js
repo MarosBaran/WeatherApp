@@ -8,9 +8,7 @@ const Navbar = (props) => {
   const {
     value: enteredName,
     isValid: enteredNameIsValid,
-    hasError: nameInputHasError,
     valueChangeHandler: nameChangeHandler,
-    inputBluHandler: nameBlurHandler,
     reset: resetNameInput,
   } = useInput((value) => value.trim() !== "");
 
@@ -39,12 +37,10 @@ const Navbar = (props) => {
     <nav className={classes.navbar}>
       <div className={classes.input}>
         <input
-          className={nameInputHasError ? classes.invalid : ""}
           type="text"
-          placeholder={nameInputHasError ? "Please enter city" : "Type in city"}
+          placeholder={"Type in city"}
           value={enteredName}
           onChange={nameChangeHandler}
-          onBlur={nameBlurHandler}
         ></input>
         <motion.button
           whileHover={{ backgroundColor: "#00BCFF" }}
