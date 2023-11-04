@@ -97,11 +97,20 @@ const processForecastData = (forecastData) => {
 
     const date = new Date(dt * 1e3);
     const sunriseFormatted = new Date(sunrise * 1e3);
-    const sunriseTime =
-      sunriseFormatted.getHours() + ":" + sunriseFormatted.getMinutes();
+    const sunriseHours = sunriseFormatted.getHours();
+    const sunriseMinutes =
+      sunriseFormatted.getMinutes() < 10
+        ? "0" + sunriseFormatted.getMinutes()
+        : sunriseFormatted.getMinutes();
+    const sunriseTime = sunriseHours + ":" + sunriseMinutes;
+
     const sunsetFormatted = new Date(sunset * 1e3);
-    const sunsetTime =
-      sunsetFormatted.getHours() + ":" + sunsetFormatted.getMinutes();
+    const sunsetHours = sunsetFormatted.getHours();
+    const sunsetMinutes =
+      sunsetFormatted.getMinutes() < 10
+        ? "0" + sunsetFormatted.getMinutes()
+        : sunsetFormatted.getMinutes();
+    const sunsetTime = sunsetHours + ":" + sunsetMinutes;
 
     const day = date.getDate();
     const month = date.getMonth() + 1;

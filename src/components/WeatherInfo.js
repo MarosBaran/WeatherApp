@@ -41,29 +41,6 @@ const WeatherInfo = (props) => {
             <p>{windSpeedKmh + " Km/h"} </p>
           </div>
         </div>
-        {/* <div className={classes.desc}>
-          <br></br>
-          <p>
-            <b>Pressure:</b>
-          </p>
-          <p>
-            <b>Wind:</b>
-          </p>
-          <p>
-            <b>Humidity:</b>
-          </p>
-        </div>
-        <div className={classes.values}>
-          <p>
-            <b>{props.weatherPressure} hPa</b>
-          </p>
-          <p>
-            <b> {windSpeedKmh} Km/h</b>
-          </p>
-          <p>
-            <b>{props.weatherHumidity} %</b>
-          </p>
-        </div> */}
       </motion.div>
     </>
   );
